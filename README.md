@@ -31,7 +31,7 @@ SMILE achieves significant improvements: **+14.2% SSIM**, **+20.6% PSNR**, **+50
 [Junqi Liu](https://scholar.google.com/citations?hl=en&authuser=1&user=4Xpspl0AAAAJ), [Zejun Wu](), [Pedro R. A. S. Bassi](), [Xinze Zhou](), [Wenxuan Li](), [Ibrahim E. Hamamci](), [Sezgin Er](), [Tianyu Lin](), [Yi Luo](), [Szymon Płotka](), [Bjoern Menze](), [Daguang Xu](), [Kai Ding](), [Kang Wang](), [Yang Yang](), [Yucheng Tang](), [Alan Yuille](https://www.cs.jhu.edu/~ayuille/), [Zongwei Zhou](https://www.zongweiz.com/)<sup>★</sup> <br/>
 Johns Hopkins University, University of Copenhagen, University of Virginia, University of Bologna, and others
 
-<a href='https://www.zongweiz.com/dataset'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://www.cs.jhu.edu/~zongwei/publication/liu2025see.pdf'><img src='https://img.shields.io/badge/Paper-PDF-purple'></a>
+<a href='https://www.zongweiz.com/dataset'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://www.cs.jhu.edu/~zongwei/preprint/liu2025see.pdf'><img src='https://img.shields.io/badge/Paper-PDF-purple'></a>
 
 # CTVerse Dataset
 
