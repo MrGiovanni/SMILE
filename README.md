@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="document/fig_teaser.pdf" alt="SMILE" width=100%>
+  <img src="document/fig_teaser.jpg" alt="SMILE" width=100%>
 </div>
 
 <h1 align="center" style="font-size: 60px; margin-bottom: 4px">SMILE: Anatomy-Aware Contrast Enhancement</h1>
