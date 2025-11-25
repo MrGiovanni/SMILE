@@ -73,12 +73,12 @@ bash download_CTVerse_label.sh
 
 | model  | paper | github | SSIM | PSNR | FID | Intensity Correlation |
 |:---|:---|:---|:---:|:---:|:---:|:---:|
-| Pix2Pix | [![arXiv](https://img.shields.io/badge/arXiv-1611.07004-FF4040.svg)](https://arxiv.org/abs/1611.07004) | [![GitHub stars](https://img.shields.io/github/stars/phillipi/pix2pix.svg?logo=github&label=Stars)](https://github.com/phillipi/pix2pix)
-| CycleGAN | [![arXiv](https://img.shields.io/badge/arXiv-1703.10593-FF4040.svg)](https://arxiv.org/abs/1703.10593) | [![GitHub stars](https://img.shields.io/github/stars/junyanz/CycleGAN.svg?logo=github&label=Stars)](https://github.com/junyanz/CycleGAN)
+| Pix2Pix | [![arXiv](https://img.shields.io/badge/arXiv-1611.07004-FF4040.svg)](https://arxiv.org/abs/1611.07004) | [![GitHub stars](https://img.shields.io/github/stars/phillipi/pix2pix.svg?logo=github&label=Stars)](https://github.com/phillipi/pix2pix) | 60.7 | 18.8 | 299.7 | 0.26
+| CycleGAN | [![arXiv](https://img.shields.io/badge/arXiv-1703.10593-FF4040.svg)](https://arxiv.org/abs/1703.10593) | [![GitHub stars](https://img.shields.io/github/stars/junyanz/CycleGAN.svg?logo=github&label=Stars)](https://github.com/junyanz/CycleGAN) | 71.9 | 18.2 | 271.1 | 0.09
 | DDPM | [![arXiv](https://img.shields.io/badge/arXiv-2006.11239-FF4040.svg)](https://arxiv.org/abs/2006.11239) | [![GitHub stars](https://img.shields.io/github/stars/hojonathanho/diffusion.svg?logo=github&label=Stars)](https://github.com/hojonathanho/diffusion)
-| Stable Diffusion | [![arXiv](https://img.shields.io/badge/arXiv-2112.10752-FF4040.svg)](https://arxiv.org/abs/2112.10752) | [![GitHub stars](https://img.shields.io/github/stars/CompVis/stable-diffusion.svg?logo=github&label=Stars)](https://github.com/CompVis/stable-diffusion)
+| Stable Diffusion | [![arXiv](https://img.shields.io/badge/arXiv-2112.10752-FF4040.svg)](https://arxiv.org/abs/2112.10752) | [![GitHub stars](https://img.shields.io/github/stars/CompVis/stable-diffusion.svg?logo=github&label=Stars)](https://github.com/CompVis/stable-diffusion) | 64.6 | 16.0 | 406.3 | 0.45
 | ControlNet | [![arXiv](https://img.shields.io/badge/arXiv-2302.05543-FF4040.svg)](https://arxiv.org/abs/2302.05543) | [![GitHub stars](https://img.shields.io/github/stars/lllyasviel/ControlNet.svg?logo=github&label=Stars)](https://github.com/lllyasviel/ControlNet)
-| SMILE | [![arXiv](https://img.shields.io/badge/arXiv-TBD-FF4040.svg)](https://arxiv.org/abs/TBD) | [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SMILE.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SMILE)
+| SMILE | [![arXiv](https://img.shields.io/badge/arXiv-TBD-FF4040.svg)](https://arxiv.org/abs/TBD) | [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SMILE.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SMILE) | 86.1 | 25.8 | 133.4 |0.95
 
 # SMILE Model 
 
@@ -94,6 +94,109 @@ bash download_CTVerse_label.sh
 - Opportunistic cancer screening from non-contrast CT scans
 - Enhanced tumor detection without additional contrast injection
 - Accessible diagnostic imaging for patients who cannot receive contrast agents
+
+## SMILE Inference Guidebook
+### Quick Start
+**multiple-CT infernce / dataset inference:**
+```bash
+bash inference_multiple_CT.sh
+```
+
+or **single-CT case infernce:**
+```bash
+bash inference.sh --gpu_id 0 --source non-contrast --target arterial,venous,delayed --patient_id RS-GIST-121
+```
+
+### step 0. download SMILE checkpoints
+<details> 
+<summary>download model checkpoints:</summary>
+
+## Download the Super-VAE checkpoints
+```bash
+hf download CVPR-SMILE/SMILE_mini --include="autoencoder/*" --local-dir "./ckpt" 
+```
+## Download the SMILE unet checkpoints
+```bash
+hf download CVPR-SMILE/SMILE_mini --include="SMILE_v0.2/*" --local-dir="./ckpt"
+```
+
+## Download the Classification model:
+```bash
+hf download CVPR-SMILE/SMILE_mini --include="classifier/*" --local-dir="./ckpt"
+```
+
+## Download the Segmentation model:
+```bash
+hf download CVPR-SMILE/SMILE_mini --include="segmenter/*" --local-dir="./ckpt"
+```
+</details>
+
+### step 1. prepare the data under bodymaps form:
+
+```bash
+ DATA_FOLDER/DATASET_NAME/
+   ├── BDMAP_00012345/
+   │     └── ct.nii.gz
+   ├── BDMAP_00067890/
+   │     └── ct.nii.gz
+```
+
+### step 2. choose inference mode:
+**multiple-CT infernce / dataset inference:**
+```bash
+bash inference_multiple_CT.sh
+```
+<details> <summary>Click to view Configuration Details</summary>
+
+1. Edit the User Defined section in the script to point to your data, model, and guide CSV:
+
+    `MODEL_CKPT_NAME`: Version of SMILE model, deault as v0.2 (stable and fast).
+
+    `DARA_FOLDER`: Parental folder to the inference dataset.
+
+    `DATASET_NAME`: Name of the inference dataset, desired in *nnunetv2* form.
+
+    `TARGETS`: Enhancement Targets. Options: [non-contrast, arterial, venous, delayed].
+
+    `GUIDE_CSV`: Case list CSV, containing the cases to inference.
+
+
+2. The outputs are supposed to be stored in:
+    ```bash
+    SMILE/out/DATASETNAME-SMILE_Version
+    # example: ../out/Dataset101_Example-SMILE_v0.2
+    ```
+
+</details>
+
+
+or **single-CT case infernce:**
+```bash
+bash inference.sh --gpu_id 0 --source non-contrast --target arterial,venous,delayed --patient_id RS-GIST-121
+```
+
+<details> <summary>Click to view Configuration Details</summary>
+
+  1. Edit the argument section when running the script to specify the GPU, source phase, target phases, patient ID, and model:
+
+  - **`--gpu_id`**: GPU index used for inference (default = `0` if omitted).
+
+  - **`--source`**: Input CT phase.  
+      Options: `non-contrast`, `arterial`, `venous`, `delayed`.
+
+  - **`--target`**: One or multiple enhancement targets (comma-separated).  
+      Options: `non-contrast`, `arterial`, `venous`, `delayed`.
+
+  - **`--patient_id`**: Patient identifier following BDMAP naming (e.g., `RS-GIST-121`).
+
+  - **`--model`**: SMILE model version to load.  
+      Default: `SMILE_v0.2.2-a100-200k`.
+
+  2. The script automatically finds the correct input NIfTI file, loads the fine-tuned UNet + VAE, and performs multi-phase translation in a single call.
+
+</details>
+
+
 
 # Citation
 
