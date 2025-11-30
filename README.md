@@ -346,6 +346,11 @@ bash download_CTVerse_label.sh
 }
 ```
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=MrGiovanni/SMILE?tab=readme-ov-file&type=date&legend=top-left)](https://www.star-history.com/#MrGiovanni/SMILE?tab=readme-ov-file&type=date&legend=top-left)
+
+
 # Acknowledgement
 
 This work was supported by the Lustgarten Foundation for Pancreatic Cancer Research, the Patrick J. McGovern Foundation Award, and the National Institutes of Health (NIH) under Award Number R01EB037669. We would like to thank the Johns Hopkins Research IT team in [IT@JH](https://researchit.jhu.edu/) for their support and infrastructure resources where some of these analyses were conducted; especially [DISCOVERY HPC](https://researchit.jhu.edu/research-hpc/). Paper content is covered by patents pending.
