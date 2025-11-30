@@ -77,6 +77,7 @@ Johns Hopkins University, University of Copenhagen, University of Virginia, Univ
 - PyTorch 2.7 or higher
 - CUDA-compatible GPU with CUDA 12.6 or higher
 - GPU VRAM > 20 GB is highly recommanded
+- A100, H100 or higher are strongly suggested 😈
 
 ### **Create a new Conda environment:**
 
@@ -113,6 +114,8 @@ bash inference.sh --gpu_id 0 --source non-contrast --target arterial,venous,dela
 ### step 0. download SMILE models checkpoints
 To inference SMILE, please first download the pre-trained checkpoints for VAE, Classifier and Segmenter, as well as the trained SMILE model.
 
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg?logo=huggingface)](https://huggingface.co/your-model-link)
+
 <details> 
 <summary>download model checkpoints:</summary>
 
@@ -131,7 +134,7 @@ hf download CVPR-SMILE/SMILE_mini --include="classifier/*" --local-dir="./ckpt"
 hf download CVPR-SMILE/SMILE_mini --include="segmenter/*" --local-dir="./ckpt"
 ```
 
-## Download the SMILE unet checkpoints
+## Download the SMILE checkpoints
 ```bash
 hf download CVPR-SMILE/SMILE_mini --include="SMILE_v0.2/*" --local-dir="./ckpt"
 ```
