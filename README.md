@@ -2,7 +2,7 @@
   <img src="document/fig_teaser.jpg" alt="SMILE" width=100%>
 </div>
 
-<h1 align="center" style="font-size: 60px; margin-bottom: 4px">SMILE: Anatomy-Aware Contrast Enhancement</h1>
+<h1 align="center" style="font-size: 60px; margin-bottom: 4px">😊 SMILE: Anatomy-Aware Contrast Enhancement</h1>
 
 <div align="center">
 
@@ -25,61 +25,35 @@ Our work includes **CTVerse**, a large-scale multi-phase CT dataset containing *
 
 SMILE achieves significant improvements: **+14.2% SSIM**, **+20.6% PSNR**, **+50% FID**, and enables cancer detection from non-contrast CT scans with **+10% F1 score** improvement.
 
-# Paper
+# 📰 News & Updates
+Major updates and announcements are shown below. Scroll for full timeline.
 
+🔥 [2025-11] **Repository Launch** -- SMILE v0.1 is now live !!! We are building the comprehensive diffusion framework, that can enhance CT images precisely and **clinically meaningful**.
+
+🔥 [2025-11] **New Version Updated** -- SMILE v0.2 is now available !! Compared to the initial version, v0.2 improves greatly in removing the small artifacts and organ HU range. See [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg?logo=huggingface)](https://huggingface.co/your-model-link) for model config details.
+
+🤖 [Ongoing] **Better Segmenter** -- We are working to provide a better segmenter, that trained with more dynamic data! The model will be trained on **public** data and will be launded soon! 
+
+
+# Overview
+* 🎯 [<u>**Paper**</u>](#smile-paper)
+* 🦾 [<u>**SMILE Guidebooks**</u>](#smile-guidebook)
+* 🔬 [<u>**Surveys of Generative Models in Medial Imageing**</u>](#smile-survey)
+* 💯 [<u>**SMILE Benchmarks**</u>](#smile-benchmarks)
+* 🌍 [<u>**CTVerse Dataset**</u>](#CTVerse-dataset)
+* 👩‍🏫 [<u>**Citations**</u>](#smile-citations)
+
+
+<a id="smile-paper"></a>
+# Paper
 <b>See More, Change Less: Anatomy-Aware Diffusion for Contrast Enhancement</b> <br/>
 [Junqi Liu](https://scholar.google.com/citations?hl=en&authuser=1&user=4Xpspl0AAAAJ), [Zejun Wu](), [Pedro R. A. S. Bassi](), [Xinze Zhou](), [Wenxuan Li](), [Ibrahim E. Hamamci](), [Sezgin Er](), [Tianyu Lin](), [Yi Luo](), [Szymon Płotka](https://scholar.google.com/citations?hl=en&authuser=1&user=g9sWRN0AAAAJ), [Bjoern Menze](https://scholar.google.com/citations?hl=en&authuser=1&user=Kv2QrQgAAAAJ), [Daguang Xu](https://scholar.google.com/citations?hl=en&authuser=1&user=r_VHYHAAAAAJ), [Kai Ding](https://scholar.google.com/citations?hl=en&authuser=1&user=OvpsAYgAAAAJ), [Kang Wang](https://radiology.ucsf.edu/people/kang-wang), [Yang Yang](https://scholar.google.com/citations?hl=en&authuser=1&user=6XsJUBIAAAAJ), [Yucheng Tang](https://scholar.google.com/citations?hl=en&authuser=1&user=0xheliUAAAAJ), [Alan Yuille](https://www.cs.jhu.edu/~ayuille/), [Zongwei Zhou](https://www.zongweiz.com/)<sup>★</sup> <br/>
 Johns Hopkins University, University of Copenhagen, University of Virginia, University of Bologna, and others
 
 <a href='https://www.zongweiz.com/dataset'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://www.cs.jhu.edu/~zongwei/preprint/liu2025see.pdf'><img src='https://img.shields.io/badge/Paper-PDF-purple'></a>
 
-# CTVerse Dataset
 
-```shell
-git clone https://github.com/MrGiovanni/SMILE.git
-cd SMILE
-bash download_CTVerse_data.sh # It needs storage for multi-phase CT scans
-bash download_CTVerse_label.sh 
-# This work is currently under peer review, but early access is available!
-# To request the CTVerse dataset files, please email Zongwei Zhou at zzhou82@jh.edu
-```
-
-#### Official training set
-- CTVerse-tr (*n*=382)
-
-#### Official *in-distribution* test set 
-
-- CTVerse-te (*n*=95)
-
-#### Four contrast phases per patient
-
-> [!NOTE]
-> Each patient has four contrast phases captured at different timepoints:
-> - **Non-contrast (N)**: Baseline scan before contrast injection (0s)
-> - **Arterial (A)**: Highlights arteries and early vascular structures (30s)
-> - **Venous (V)**: Enhances organs such as liver and spleen (75s)
-> - **Delay (D)**: Shows mainly urinary system (>180s)
-
-#### Anatomical annotations
-
-- **88 anatomical structures** including organs, vessels, bones, and disease regions
-- **159,632 three-dimensional masks** total across all patients and phases
-- Annotations for **pancreatic, liver, and kidney tumors**
-
-# SMILE Benchmark (official in-distribution test set)
-
-> [!NOTE]
-> We are calling for more baseline methods. 
-
-| model  | paper | github | SSIM | PSNR | FID | Intensity Correlation |
-|:---|:---|:---|:---:|:---:|:---:|:---:|
-| Pix2Pix | [![arXiv](https://img.shields.io/badge/arXiv-1611.07004-FF4040.svg)](https://arxiv.org/abs/1611.07004) | [![GitHub stars](https://img.shields.io/github/stars/phillipi/pix2pix.svg?logo=github&label=Stars)](https://github.com/phillipi/pix2pix) | 60.7 | 18.8 | 299.7 | 0.26
-| CycleGAN | [![arXiv](https://img.shields.io/badge/arXiv-1703.10593-FF4040.svg)](https://arxiv.org/abs/1703.10593) | [![GitHub stars](https://img.shields.io/github/stars/junyanz/CycleGAN.svg?logo=github&label=Stars)](https://github.com/junyanz/CycleGAN) | 71.9 | 18.2 | 271.1 | 0.09
-| DDPM | [![arXiv](https://img.shields.io/badge/arXiv-2006.11239-FF4040.svg)](https://arxiv.org/abs/2006.11239) | [![GitHub stars](https://img.shields.io/github/stars/hojonathanho/diffusion.svg?logo=github&label=Stars)](https://github.com/hojonathanho/diffusion)
-| Stable Diffusion | [![arXiv](https://img.shields.io/badge/arXiv-2112.10752-FF4040.svg)](https://arxiv.org/abs/2112.10752) | [![GitHub stars](https://img.shields.io/github/stars/CompVis/stable-diffusion.svg?logo=github&label=Stars)](https://github.com/CompVis/stable-diffusion) | 64.6 | 16.0 | 406.3 | 0.45
-| ControlNet | [![arXiv](https://img.shields.io/badge/arXiv-2302.05543-FF4040.svg)](https://arxiv.org/abs/2302.05543) | [![GitHub stars](https://img.shields.io/github/stars/lllyasviel/ControlNet.svg?logo=github&label=Stars)](https://github.com/lllyasviel/ControlNet)
-| SMILE | [![arXiv](https://img.shields.io/badge/arXiv-TBD-FF4040.svg)](https://arxiv.org/abs/TBD) | [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SMILE.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SMILE) | 86.1 | 25.8 | 133.4 |0.95
-
+<a id="smile-guidebook"></a>
 # SMILE Model 
 
 > [!NOTE]
@@ -261,7 +235,104 @@ The data for inference is expected to be organized into BDMAP form, as below:
           ```
     </details>
 
+<a id="smile-survey"></a>
 
+# Surveys 
+
+## 💉 Surveys of Generative Models in Medical Imaging
+
+[👩‍⚕️] models specificly designed for medical imaging use.
+
+[⭐️] surveys for generative models in medical imaging.
+
+
+### GAN-based Generative Models
+- **Pix2Pix**, “Image-to-Image Translation with Conditional Adversarial Networks”.  [![arXiv](https://img.shields.io/badge/arXiv-1611.07004-b31b1b.svg)](https://arxiv.org/abs/1611.07004) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://phillipi.github.io/pix2pix/) 
+
+- **CycleGAN**, “CycleGAN for Unpaired Medical Image Translation”.  [![arXiv](https://img.shields.io/badge/arXiv-1703.10593-b31b1b.svg)](https://arxiv.org/abs/1703.10593) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://junyanz.github.io/CycleGAN/) 
+
+
+- [👩‍⚕️] **CyTran**, “CyTran: Cycle-Consistent Transformers for Medical Image Translation”.   [![arXiv](https://img.shields.io/badge/arXiv-2301.12345-b31b1b.svg)](https://arxiv.org/abs/2110.06400)  
+
+- **CUT**, “Contrastive Unpaired Translation for Medical Applications”.  [![arXiv](https://img.shields.io/badge/arXiv-2007.15651-b31b1b.svg)](https://arxiv.org/abs/2007.15651) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://taesung.me/ContrastiveUnpairedTranslation/) 
+
+
+### VAE-based Generative Models
+- **DALL-E / VQ-VAE**, “Taming Transformers for Diverse Image Generation”.  [![arXiv](https://img.shields.io/badge/arXiv-2012.09841-b31b1b.svg)](https://arxiv.org/abs/2012.09841) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://openai.com/index/dall-e/) 
+
+
+### Diffusion-based Generative Models
+- [👩‍⚕️] **MedDiffusion**, “Medical Diffusion: Denoising Diffusion Probabilistic Models for 3D Medical Image Generation”.  [![arXiv](https://img.shields.io/badge/arXiv-2307.12345-b31b1b.svg)](https://arxiv.org/abs/2211.03364)
+
+
+### Comprehensive Surveys
+> [!NOTE]
+> We are calling for more outstanding surveys 😊. 
+- [⭐️] **Diffusion Models for Medical Image Analysis: A Comprehensive Survey**.  
+  [![arXiv](https://img.shields.io/badge/arXiv-2207.10454-b31b1b.svg)](https://arxiv.org/abs/2211.07804)
+
+- [⭐️] **Generative ai for medical imaging: extending the monai framework**.
+  [![arXiv](https://img.shields.io/badge/arXiv-2303.09334-b31b1b.svg)](https://arxiv.org/abs/2307.15208)
+
+
+
+<a id="smile-benchmarks"></a>
+
+# SMILE Benchmark (official in-distribution test set)
+
+> [!NOTE]
+> We are calling for more baseline methods. 
+
+| model  | paper | github | SSIM | PSNR | FID | Intensity Correlation |
+|:---|:---|:---|:---:|:---:|:---:|:---:|
+| Pix2Pix | [![arXiv](https://img.shields.io/badge/arXiv-1611.07004-FF4040.svg)](https://arxiv.org/abs/1611.07004) | [![GitHub stars](https://img.shields.io/github/stars/phillipi/pix2pix.svg?logo=github&label=Stars)](https://github.com/phillipi/pix2pix) | 60.7 | 18.8 | 299.7 | 0.26
+| CycleGAN | [![arXiv](https://img.shields.io/badge/arXiv-1703.10593-FF4040.svg)](https://arxiv.org/abs/1703.10593) | [![GitHub stars](https://img.shields.io/github/stars/junyanz/CycleGAN.svg?logo=github&label=Stars)](https://github.com/junyanz/CycleGAN) | 71.9 | 18.2 | 271.1 | 0.09
+| DDPM | [![arXiv](https://img.shields.io/badge/arXiv-2006.11239-FF4040.svg)](https://arxiv.org/abs/2006.11239) | [![GitHub stars](https://img.shields.io/github/stars/hojonathanho/diffusion.svg?logo=github&label=Stars)](https://github.com/hojonathanho/diffusion)
+| Stable Diffusion | [![arXiv](https://img.shields.io/badge/arXiv-2112.10752-FF4040.svg)](https://arxiv.org/abs/2112.10752) | [![GitHub stars](https://img.shields.io/github/stars/CompVis/stable-diffusion.svg?logo=github&label=Stars)](https://github.com/CompVis/stable-diffusion) | 64.6 | 16.0 | 406.3 | 0.45
+| ControlNet | [![arXiv](https://img.shields.io/badge/arXiv-2302.05543-FF4040.svg)](https://arxiv.org/abs/2302.05543) | [![GitHub stars](https://img.shields.io/github/stars/lllyasviel/ControlNet.svg?logo=github&label=Stars)](https://github.com/lllyasviel/ControlNet)
+| SMILE | [![arXiv](https://img.shields.io/badge/arXiv-TBD-FF4040.svg)](https://arxiv.org/abs/TBD) | [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SMILE.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SMILE) | 86.1 | 25.8 | 133.4 |0.95
+
+<a id="CTVerse-dataset"></a>
+
+# CTVerse Dataset
+
+```shell
+git clone https://github.com/MrGiovanni/SMILE.git
+cd SMILE
+bash download_CTVerse_data.sh # It needs storage for multi-phase CT scans
+bash download_CTVerse_label.sh 
+# This work is currently under peer review, but early access is available!
+# To request the CTVerse dataset files, please email Zongwei Zhou at zzhou82@jh.edu
+```
+
+#### Official training set
+- CTVerse-tr (*n*=382)
+
+#### Official *in-distribution* test set 
+
+- CTVerse-te (*n*=95)
+
+#### Four contrast phases per patient
+
+> [!NOTE]
+> Each patient has four contrast phases captured at different timepoints:
+> - **Non-contrast (N)**: Baseline scan before contrast injection (0s)
+> - **Arterial (A)**: Highlights arteries and early vascular structures (30s)
+> - **Venous (V)**: Enhances organs such as liver and spleen (75s)
+> - **Delay (D)**: Shows mainly urinary system (>180s)
+
+#### Anatomical annotations
+
+- **88 anatomical structures** including organs, vessels, bones, and disease regions
+- **159,632 three-dimensional masks** total across all patients and phases
+- Annotations for **pancreatic, liver, and kidney tumors**
+
+
+
+
+
+
+<a id="smile-citations"></a>
 
 # Citation
 
