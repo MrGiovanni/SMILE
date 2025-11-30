@@ -37,9 +37,9 @@ Major updates and announcements are shown below. Scroll for full timeline.
 
 # Overview
 * 🎯 [<u>**Paper**</u>](#smile-paper)
+* 💯 [<u>**SMILE Benchmarks**</u>](#smile-benchmarks)
 * 🦾 [<u>**SMILE Guidebooks**</u>](#smile-guidebook)
 * 🔬 [<u>**Surveys of Generative Models in Medial Imageing**</u>](#smile-survey)
-* 💯 [<u>**SMILE Benchmarks**</u>](#smile-benchmarks)
 * 🌍 [<u>**CTVerse Dataset**</u>](#CTVerse-dataset)
 * 👩‍🏫 [<u>**Citations**</u>](#smile-citations)
 
@@ -51,6 +51,27 @@ Major updates and announcements are shown below. Scroll for full timeline.
 Johns Hopkins University, University of Copenhagen, University of Virginia, University of Bologna, and others
 
 <a href='https://www.zongweiz.com/dataset'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://www.cs.jhu.edu/~zongwei/preprint/liu2025see.pdf'><img src='https://img.shields.io/badge/Paper-PDF-purple'></a>
+
+<a id="smile-benchmarks"></a>
+
+# SMILE Benchmark (official in-distribution test set)
+
+> [!NOTE]
+> We are calling for more baseline methods. 
+
+| model  | paper | github | SSIM | PSNR | FID | Intensity Correlation |
+|:---|:---|:---|:---:|:---:|:---:|:---:|
+| Pix2Pix | [![arXiv](https://img.shields.io/badge/arXiv-1611.07004-FF4040.svg)](https://arxiv.org/abs/1611.07004) | [![GitHub stars](https://img.shields.io/github/stars/phillipi/pix2pix.svg?logo=github&label=Stars)](https://github.com/phillipi/pix2pix) | 60.7 | 18.8 | 299.7 | 0.26
+| CycleGAN | [![arXiv](https://img.shields.io/badge/arXiv-1703.10593-FF4040.svg)](https://arxiv.org/abs/1703.10593) | [![GitHub stars](https://img.shields.io/github/stars/junyanz/CycleGAN.svg?logo=github&label=Stars)](https://github.com/junyanz/CycleGAN) | 71.9 | 18.2 | 271.1 | 0.09
+| DDPM | [![arXiv](https://img.shields.io/badge/arXiv-2006.11239-FF4040.svg)](https://arxiv.org/abs/2006.11239) | [![GitHub stars](https://img.shields.io/github/stars/hojonathanho/diffusion.svg?logo=github&label=Stars)](https://github.com/hojonathanho/diffusion)
+| Stable Diffusion | [![arXiv](https://img.shields.io/badge/arXiv-2112.10752-FF4040.svg)](https://arxiv.org/abs/2112.10752) | [![GitHub stars](https://img.shields.io/github/stars/CompVis/stable-diffusion.svg?logo=github&label=Stars)](https://github.com/CompVis/stable-diffusion) | 64.6 | 16.0 | 406.3 | 0.45
+| ControlNet | [![arXiv](https://img.shields.io/badge/arXiv-2302.05543-FF4040.svg)](https://arxiv.org/abs/2302.05543) | [![GitHub stars](https://img.shields.io/github/stars/lllyasviel/ControlNet.svg?logo=github&label=Stars)](https://github.com/lllyasviel/ControlNet)
+| SMILE | [![arXiv](https://img.shields.io/badge/arXiv-TBD-FF4040.svg)](https://arxiv.org/abs/TBD) | [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SMILE.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SMILE) | 86.1 | 25.8 | 133.4 |0.95
+
+## Comparison to current commerical AI models
+<div align="center">
+  <img src="document/Twitter.png" alt="SMILE" width=100%>
+</div>
 
 
 <a id="smile-guidebook"></a>
@@ -279,21 +300,7 @@ The data for inference is expected to be organized into BDMAP form, as below:
 
 
 
-<a id="smile-benchmarks"></a>
 
-# SMILE Benchmark (official in-distribution test set)
-
-> [!NOTE]
-> We are calling for more baseline methods. 
-
-| model  | paper | github | SSIM | PSNR | FID | Intensity Correlation |
-|:---|:---|:---|:---:|:---:|:---:|:---:|
-| Pix2Pix | [![arXiv](https://img.shields.io/badge/arXiv-1611.07004-FF4040.svg)](https://arxiv.org/abs/1611.07004) | [![GitHub stars](https://img.shields.io/github/stars/phillipi/pix2pix.svg?logo=github&label=Stars)](https://github.com/phillipi/pix2pix) | 60.7 | 18.8 | 299.7 | 0.26
-| CycleGAN | [![arXiv](https://img.shields.io/badge/arXiv-1703.10593-FF4040.svg)](https://arxiv.org/abs/1703.10593) | [![GitHub stars](https://img.shields.io/github/stars/junyanz/CycleGAN.svg?logo=github&label=Stars)](https://github.com/junyanz/CycleGAN) | 71.9 | 18.2 | 271.1 | 0.09
-| DDPM | [![arXiv](https://img.shields.io/badge/arXiv-2006.11239-FF4040.svg)](https://arxiv.org/abs/2006.11239) | [![GitHub stars](https://img.shields.io/github/stars/hojonathanho/diffusion.svg?logo=github&label=Stars)](https://github.com/hojonathanho/diffusion)
-| Stable Diffusion | [![arXiv](https://img.shields.io/badge/arXiv-2112.10752-FF4040.svg)](https://arxiv.org/abs/2112.10752) | [![GitHub stars](https://img.shields.io/github/stars/CompVis/stable-diffusion.svg?logo=github&label=Stars)](https://github.com/CompVis/stable-diffusion) | 64.6 | 16.0 | 406.3 | 0.45
-| ControlNet | [![arXiv](https://img.shields.io/badge/arXiv-2302.05543-FF4040.svg)](https://arxiv.org/abs/2302.05543) | [![GitHub stars](https://img.shields.io/github/stars/lllyasviel/ControlNet.svg?logo=github&label=Stars)](https://github.com/lllyasviel/ControlNet)
-| SMILE | [![arXiv](https://img.shields.io/badge/arXiv-TBD-FF4040.svg)](https://arxiv.org/abs/TBD) | [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SMILE.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SMILE) | 86.1 | 25.8 | 133.4 |0.95
 
 <a id="CTVerse-dataset"></a>
 
