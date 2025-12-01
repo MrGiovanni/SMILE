@@ -32,8 +32,9 @@ Major updates and announcements are shown below. Scroll for full timeline.
 
 🔥 [2025-11] **New Version Updated** -- SMILE v0.2 is now available !! Compared to the initial version, v0.2 improves greatly in removing the small artifacts and organ HU range. See [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg?logo=huggingface)](https://huggingface.co/your-model-link) for model config details.
 
-🤖 [Ongoing] **Better Segmenter** -- We are working to provide a better segmenter, that trained with more dynamic data! The model will be trained on **public** data and will be launded soon! 
+🤖 [2025-12] **Better Segmenter** -- We provide a better segmenter (+5 avg. DSC), that trained with more dynamic data! The model is trained on public PanTS dataset [![GitHub](https://img.shields.io/badge/GitHub-Repo-black?logo=github)](https://github.com/MrGiovanni/PanTS), and the model is now online: [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg?logo=huggingface)](https://huggingface.co/your-model-link).
 
+🚀 [Ongoing] **New Version Preparing** -- SMILE v0.3 is undergoing fine-tuning process and will be made available soon! This version expects to make organ substructures such as kidney cortex more realistic 📈.
 
 # Overview
 * 🎯 [<u>**Paper**</u>](#smile-paper)
