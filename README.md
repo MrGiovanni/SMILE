@@ -25,6 +25,10 @@ Our work includes **CTVerse**, a large-scale multi-phase CT dataset containing *
 
 SMILE achieves significant improvements: **+14.2% SSIM**, **+20.6% PSNR**, **+50% FID**, and enables cancer detection from non-contrast CT scans with **+10% F1 score** improvement.
 
+<div align="center">
+  <img src="document/pdac_example.png" alt="SMILE" width=100%>
+</div>
+
 # 📰 News & Updates
 Major updates and announcements are shown below. Scroll for full timeline.
 
