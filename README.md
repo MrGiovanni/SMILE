@@ -363,7 +363,7 @@ bash download_CTVerse_label.sh
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=MrGiovanni/SMILE?tab=readme-ov-file&type=date&legend=top-left)](https://www.star-history.com/#MrGiovanni/SMILE?tab=readme-ov-file&type=date&legend=top-left)
+[![Star History Chart](https://api.star-history.com/svg?repos=MrGiovanni/SMILE&type=date&legend=top-left)](https://www.star-history.com/#MrGiovanni/SMILE&type=date&legend=top-left)
 
 
 # Acknowledgement
