@@ -19,35 +19,13 @@
 </div>
 
 
-We present **SMILE** (Super Modality Image Learning and Enhancement), an anatomy-aware diffusion model for clinically reliable CT contrast enhancement. Unlike existing generative models that often over-edit and distort anatomical structures, SMILE learns the spatial and physiological relationships between organs and their contrast uptake, enhancing only clinically relevant regions while keeping others unchanged.
-
-Our work includes **CTVerse**, a large-scale multi-phase CT dataset containing **477** patients from **112** hospitals, with all four contrast phases (non-contrast, arterial, venous, and delay). Each scan is annotated with **88** anatomical structures and tumors, resulting in **159,632** three-dimensional masks.
+We present **SMILE** (Super Modality Image Learning and Enhancement), an anatomy-aware diffusion model for clinically reliable CT contrast enhancement. 
 
 SMILE achieves significant improvements: **+14.2% SSIM**, **+20.6% PSNR**, **+50% FID**, and enables cancer detection from non-contrast CT scans with **+10% F1 score** improvement.
 
 <div align="center">
   <img src="document/pdac_example.png" alt="SMILE" width=100%>
 </div>
-
-# 📰 News & Updates
-Major updates and announcements are shown below. Scroll for full timeline.
-
-🔥 [2025-11] **Repository Launch** -- SMILE v0.1 is now live !!! We are building the comprehensive diffusion framework, that can enhance CT images precisely and **clinically meaningful**.
-
-🔥 [2025-11] **New Version Updated** -- SMILE v0.2 is now available !! Compared to the initial version, v0.2 improves greatly in removing the small artifacts and organ HU range. See [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg?logo=huggingface)](https://huggingface.co/your-model-link) for model config details.
-
-🤖 [2025-12] **Better Segmenter** -- We provide a better segmenter (+5 avg. DSC), that trained with more dynamic data! The model is trained on public PanTS dataset [![GitHub](https://img.shields.io/badge/GitHub-Repo-black?logo=github)](https://github.com/MrGiovanni/PanTS), and the model is now online: [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg?logo=huggingface)](https://huggingface.co/CVPR-SMILE/PanTS_Segmenter).
-
-🚀 [Ongoing] **New Version Preparing** -- SMILE v0.3 is undergoing fine-tuning process and will be made available soon! This version expects to make organ substructures such as kidney cortex more realistic 📈.
-
-# Overview
-* 🎯 [<u>**Paper**</u>](#smile-paper)
-* 💯 [<u>**SMILE Benchmarks**</u>](#smile-benchmarks)
-* 🦾 [<u>**SMILE Guidebooks**</u>](#smile-guidebook)
-* 🔬 [<u>**Surveys of Generative Models in Medial Imageing**</u>](#smile-survey)
-* 🌍 [<u>**CTVerse Dataset**</u>](#CTVerse-dataset)
-* 👩‍🏫 [<u>**Citations**</u>](#smile-citations)
-
 
 <a id="smile-paper"></a>
 # Paper
@@ -56,6 +34,29 @@ Major updates and announcements are shown below. Scroll for full timeline.
 Johns Hopkins University, University of Copenhagen, University of Virginia, University of Bologna, and others
 
 <a href='https://www.zongweiz.com/dataset'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://www.cs.jhu.edu/~zongwei/preprint/liu2025see.pdf'><img src='https://img.shields.io/badge/Paper-PDF-purple'></a>
+
+# 📰 News & Updates
+Major updates and announcements are shown below.
+<details> 
+<summary> Click for full timeline. ⌛️</summary>
+
+  🔥 [2025-11] **Repository Launch** -- SMILE v0.1 is now live !!! We are building the comprehensive diffusion framework, that can enhance CT images precisely and **clinically meaningful**.
+
+  🔥 [2025-11] **New Version Updated** -- SMILE v0.2 is now available !! Compared to the initial version, v0.2 improves greatly in removing the small artifacts and organ HU range. See [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg?logo=huggingface)](https://huggingface.co/your-model-link) for model config details.
+
+  🤖 [2025-12] **Better Segmenter** -- We provide a better segmenter (+5 avg. DSC), that trained with more dynamic data! The model is trained on public PanTS dataset [![GitHub](https://img.shields.io/badge/GitHub-Repo-black?logo=github)](https://github.com/MrGiovanni/PanTS), and the model is now online: [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg?logo=huggingface)](https://huggingface.co/CVPR-SMILE/PanTS_Segmenter).
+
+  🚀 [Ongoing] **New Version Preparing** -- SMILE v0.3 is undergoing fine-tuning process and will be made available soon! This version expects to make organ substructures such as kidney cortex more realistic 📈.
+
+</details> 
+
+# Overview
+* 💯 [<u>**SMILE Benchmarks**</u>](#smile-benchmarks)
+* 🦾 [<u>**SMILE Guidebooks**</u>](#smile-guidebook)
+* 🌍 [<u>**CTVerse Dataset**</u>](#CTVerse-dataset)
+* 🔬 [<u>**Surveys of GenAI in Medial Imageing**</u>](#smile-survey)
+* 👩‍🏫 [<u>**Citations**</u>](#smile-citations)
+
 
 <a id="smile-benchmarks"></a>
 
@@ -103,7 +104,6 @@ Johns Hopkins University, University of Copenhagen, University of Virginia, Univ
 - PyTorch 2.7 or higher
 - CUDA-compatible GPU with CUDA 12.6 or higher
 - GPU VRAM > 20 GB is highly recommanded
-- A100, H100 or higher are strongly suggested 😈
 
 ### **Create a new Conda environment:**
 
@@ -122,147 +122,58 @@ pip install -r requirements.txt
 ```
 
 ## Getting Started
+
+See detailed instructions in [SMILE GUIDE BOOK](./document/SMILEGuidebook.md) 🔎
+
 **(1) multiple-CT infernce / dataset inference:**
 ```bash
 bash inference_multiple_CT.sh
 ```
-[See detailed instructions ↓](#multi-ct-inference)
 
 
 **(2) single-CT case infernce:**
 ```bash
 bash inference.sh --gpu_id 0 --source non-contrast --target arterial,venous,delayed --patient_id RS-GIST-121
 ```
-[See detailed instructions ↓](#multi-ct-inference)
 
 
-## SMILE Guide Book
-### step 0. download SMILE models checkpoints
-To inference SMILE, please first download the pre-trained checkpoints for VAE, Classifier and Segmenter, as well as the trained SMILE model.
+<a id="CTVerse-dataset"></a>
 
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg?logo=huggingface)](https://huggingface.co/your-model-link)
+# CTVerse Dataset
+Our work further includes **CTVerse**, a large-scale multi-phase CT dataset containing **477** patients from **112** hospitals, with all four contrast phases (non-contrast, arterial, venous, and delay). 
 
-<details> 
-<summary>download model checkpoints:</summary>
-
-## Download the Super-VAE checkpoints
-```bash
-hf download CVPR-SMILE/SMILE_mini --include="autoencoder/*" --local-dir "./ckpt" 
+```shell
+git clone https://github.com/MrGiovanni/SMILE.git
+cd SMILE
+bash download_CTVerse_data.sh # It needs storage for multi-phase CT scans
+bash download_CTVerse_label.sh 
+# This work is currently under peer review, but early access is available!
+# To request the CTVerse dataset files, please email Zongwei Zhou at zzhou82@jh.edu
 ```
 
-## Download the Classification model:
-```bash
-hf download CVPR-SMILE/SMILE_mini --include="classifier/*" --local-dir="./ckpt"
-```
+#### Official training set
+- CTVerse-tr (*n*=382)
 
-## Download the Segmentation model:
-```bash
-hf download CVPR-SMILE/SMILE_mini --include="segmenter/*" --local-dir="./ckpt"
-```
+#### Official *in-distribution* test set 
 
-## Download the SMILE checkpoints
-```bash
-hf download CVPR-SMILE/SMILE_mini --include="SMILE_v0.2/*" --local-dir="./ckpt"
-```
+- CTVerse-te (*n*=95)
 
-</details>
+#### Four contrast phases per patient
 
-### step 1. prepare the data:
+> [!NOTE]
+> Each patient has four contrast phases captured at different timepoints:
+> - **Non-contrast (N)**: Baseline scan before contrast injection (0s)
+> - **Arterial (A)**: Highlights arteries and early vascular structures (30s)
+> - **Venous (V)**: Enhances organs such as liver and spleen (75s)
+> - **Delay (D)**: Shows mainly urinary system (>180s)
 
-The data for inference is expected to be organized into BDMAP form, as below:
+#### Anatomical annotations
 
-```bash
-  DATA_FOLDER
-    DATASET_NAME/
-    ├── BDMAP_00012345/
-    │     └── ct.nii.gz
-    ├── BDMAP_00067890/
-    │     └── ct.nii.gz
-```
-
-<a id="multi-ct-inference"></a>
-### step 2. choose inference mode:
-1. **multiple-CT infernce / dataset inference:**
-    ```bash
-    cd SMILEModel
-    bash inference_multiple_CT.sh
-    ```
-    <details> <summary>Click to view Configuration Details</summary>
-
-    1. Edit the User Defined section in the script to point to your data, model, and guide CSV:
-          ```bash
-          # ================ User Defined ================ #
-          MODEL_CKPT_NAME="SMILE/Version (default as v0.2)"
-          DATA_FOLDER="/path/to/nifti/dataset/parent/folder"
-          DATASET_NAME="/dataset/name/as/nnunetv2/from"
-          # Enhancement targets
-          TARGETS=("arterial" "venous" "delayed")
-          GUIDE_CSV="/nifti/you/want/to/inference"
-          # ============================================== #
-          ```
-
-        `MODEL_CKPT_NAME`: Version of SMILE model, deault as v0.2 (stable and fast).
-
-        `DARA_FOLDER`: Parental folder to the inference dataset.
-
-        `DATASET_NAME`: Name of the inference dataset, desired in *nnunetv2* form.
-
-        `TARGETS`: One or multiple enhancement targets (comma-separated).  
-          Options: `non-contrast`, `arterial`, `venous`, `delayed`.
-
-        `GUIDE_CSV`: Case list CSV, containing the cases to inference.
+- **88 anatomical structures** including organs, vessels, bones, and disease regions
+- **159,632 three-dimensional masks** total across all patients and phases
+- Annotations for **pancreatic, liver, and kidney tumors**
 
 
-    2. The outputs are supposed to be stored in:
-        ```bash
-        SMILE/out/DATASETNAME-SMILE_Version
-        # example: ../out/Dataset101_Example-SMILE_v0.2
-        ```
-
-    </details>
-
-
-2. **single-CT case infernce:**
-    ```bash
-    cd SMILEModel
-    bash inference.sh \
-        --gpu_id 0 \
-        --source non-contrast \
-        --target arterial,venous,delayed \
-        --patient_id Example-1
-    ```
-
-    <details> <summary>Click to view Configuration Details</summary>
-
-      1. Edit the argument section when running the script to specify the GPU, source phase, target phases, patient ID, and model:
-
-          ```bash
-              --gpu_id 0 \
-              --source non-contrast \
-              --target arterial,venous,delayed \
-              --patient_id Example-1
-          ```
-      - **`--gpu_id`**: GPU index used for inference (default = `0` if omitted).
-
-      - **`--source`**: Input CT phase.  
-          Options: `non-contrast`, `arterial`, `venous`, `delayed`.
-
-      - **`--target`**: One or multiple enhancement targets (comma-separated).  
-          Options: `non-contrast`, `arterial`, `venous`, `delayed`.
-
-      - **`--patient_id`**: Patient identifier following BDMAP naming (e.g., `RS-GIST-121`).
-
-      - **`--model`**: SMILE model version to load.  
-          Default: `SMILE_v0.2.2-a100-200k`.
-
-      2. The script automatically finds the correct input NIfTI file, loads the fine-tuned UNet + VAE, and performs multi-phase translation in a single call.
-
-      3. The outputs are supposed to be stored in:
-          ```bash
-          SMILE/out/DATASETNAME-SMILE_Version
-          # example: ../out/Dataset101_Example-SMILE_v0.2
-          ```
-    </details>
 
 <a id="smile-survey"></a>
 
@@ -302,49 +213,7 @@ The data for inference is expected to be organized into BDMAP form, as below:
 
 - [⭐️] **Generative ai for medical imaging: extending the monai framework**.
   [![arXiv](https://img.shields.io/badge/arXiv-2303.09334-b31b1b.svg)](https://arxiv.org/abs/2307.15208)
-
-
-
-
-
-<a id="CTVerse-dataset"></a>
-
-# CTVerse Dataset
-
-```shell
-git clone https://github.com/MrGiovanni/SMILE.git
-cd SMILE
-bash download_CTVerse_data.sh # It needs storage for multi-phase CT scans
-bash download_CTVerse_label.sh 
-# This work is currently under peer review, but early access is available!
-# To request the CTVerse dataset files, please email Zongwei Zhou at zzhou82@jh.edu
-```
-
-#### Official training set
-- CTVerse-tr (*n*=382)
-
-#### Official *in-distribution* test set 
-
-- CTVerse-te (*n*=95)
-
-#### Four contrast phases per patient
-
-> [!NOTE]
-> Each patient has four contrast phases captured at different timepoints:
-> - **Non-contrast (N)**: Baseline scan before contrast injection (0s)
-> - **Arterial (A)**: Highlights arteries and early vascular structures (30s)
-> - **Venous (V)**: Enhances organs such as liver and spleen (75s)
-> - **Delay (D)**: Shows mainly urinary system (>180s)
-
-#### Anatomical annotations
-
-- **88 anatomical structures** including organs, vessels, bones, and disease regions
-- **159,632 three-dimensional masks** total across all patients and phases
-- Annotations for **pancreatic, liver, and kidney tumors**
-
-
-
-
+  
 
 
 <a id="smile-citations"></a>
