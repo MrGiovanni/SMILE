@@ -12,8 +12,9 @@ bash download_smile_demo_data.sh
 
 <details> 
 <summary>Click to download deatiled model checkpoints 🤖</summary>
+<br>
 
-All of the pre-trained will be download to `./ckpts` folder.
+All of the pre-trained will be download to `./ckpt` folder.
 ## Download the Super-VAE checkpoints
 ```bash
 hf download MitakaKuma/SMILE --include="autoencoder/*" --local-dir "./ckpt" 

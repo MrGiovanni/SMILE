@@ -9,7 +9,7 @@
 
 [![smile dataset](https://img.shields.io/badge/SMILE-Dataset-FF4040.svg)](https://github.com/MrGiovanni/SMILE?tab=readme-ov-file#ctverse-dataset)
 [![smile benchmark](https://img.shields.io/badge/SMILE-Benchmark-FF4040.svg)](https://github.com/MrGiovanni/SMILE?tab=readme-ov-file#smile-benchmark)
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-SMILE_Model-yellow.svg?logo=huggingface)](https://huggingface.co/MitakaKuma/SMILE) <br/>
+[![HuggingFace](https://img.shields.io/badge/SMILE-Model-FF4040.svg)](https://huggingface.co/MitakaKuma/SMILE) <br/>
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=MrGiovanni/SMILE&left_color=%2363C7E6&right_color=%23CEE75F)
 [![GitHub Repo stars](https://img.shields.io/github/stars/MrGiovanni/SMILE?style=social)](https://github.com/MrGiovanni/SMILE/stargazers) 
 <a href="https://twitter.com/bodymaps317">
@@ -38,8 +38,8 @@ Johns Hopkins University, University of Copenhagen, University of Virginia, Univ
 # 📰 News & Updates
 Major updates and announcements are shown below.
 <details> 
-<summary> Click for full timeline. ⌛️</summary>
-
+<summary> Click for full timeline ⌛️</summary>
+<br>
   🔥 [2025-11] **Repository Launch** -- SMILE v0.1 is now live !!! We are building the comprehensive diffusion framework, that can enhance CT images precisely and **clinically meaningful**.
 
   🔥 [2025-11] **New Version Updated** -- SMILE v0.2 is now available !! Compared to the initial version, v0.2 improves greatly in removing the small artifacts and organ HU range. See [![HuggingFace](https://img.shields.io/badge/HuggingFace-SMILE_Model-yellow.svg?logo=huggingface)](https://huggingface.co/MitakaKuma/SMILE) for model config details.
@@ -119,10 +119,10 @@ bash download_ckpts.sh
 
 **(2) download the SMILE demo data**
 ```bash
-bash download_smile_demo_data.sh
+bash download_demo_dataset.sh
 ```
 
-**multiple-CT infernce / dataset inference:**
+**(3) dataset inference:**
 ```bash
 bash inference_easy.sh
 ```
