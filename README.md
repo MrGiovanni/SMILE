@@ -69,10 +69,10 @@ Major updates and announcements are shown below.
 |:---|:---|:---|:---:|:---:|:---:|:---:|
 | Pix2Pix | [![arXiv](https://img.shields.io/badge/arXiv-1611.07004-FF4040.svg)](https://arxiv.org/abs/1611.07004) | [![GitHub stars](https://img.shields.io/github/stars/phillipi/pix2pix.svg?logo=github&label=Stars)](https://github.com/phillipi/pix2pix) | 60.7 | 18.8 | 299.7 | 0.26
 | CycleGAN | [![arXiv](https://img.shields.io/badge/arXiv-1703.10593-FF4040.svg)](https://arxiv.org/abs/1703.10593) | [![GitHub stars](https://img.shields.io/github/stars/junyanz/CycleGAN.svg?logo=github&label=Stars)](https://github.com/junyanz/CycleGAN) | 71.9 | 18.2 | 271.1 | 0.09
-| DALL-E | [![arXiv](https://img.shields.io/badge/arXiv-2006.11239-FF4040.svg)](https://arxiv.org/abs/2012.09841) | [![GitHub stars](https://img.shields.io/github/stars/hojonathanho/diffusion.svg?logo=github&label=Stars)](https://github.com/hojonathanho/diffusion) | 51.4 | 16.3 | 423.7 | 0.71
+| DALL-E | [![arXiv](https://img.shields.io/badge/arXiv-2012.0984-FF4040.svg)](https://arxiv.org/abs/2012.09841) | [![GitHub stars](https://img.shields.io/github/stars/hojonathanho/diffusion.svg?logo=github&label=Stars)](https://github.com/hojonathanho/diffusion) | 51.4 | 16.3 | 423.7 | 0.71
 | Stable Diffusion | [![arXiv](https://img.shields.io/badge/arXiv-2112.10752-FF4040.svg)](https://arxiv.org/abs/2112.10752) | [![GitHub stars](https://img.shields.io/github/stars/CompVis/stable-diffusion.svg?logo=github&label=Stars)](https://github.com/CompVis/stable-diffusion) | 64.6 | 16.0 | 406.3 | 0.45
-| CUT | [![arXiv](https://img.shields.io/badge/arXiv-2302.05543-FF4040.svg)](https://arxiv.org/abs/2007.15651) | [![GitHub stars](https://img.shields.io/github/stars/lllyasviel/ControlNet.svg?logo=github&label=Stars)](https://github.com/lllyasviel/ControlNet) | 75.4 | 21.4 | 269.5 | 0.06
-| SMILE | [![arXiv](https://img.shields.io/badge/arXiv-TBD-FF4040.svg)](https://www.arxiv.org/abs/2512.07251) | [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SMILE.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SMILE) | 86.1 | 25.8 | 133.4 |0.95
+| CUT | [![arXiv](https://img.shields.io/badge/arXiv-2007.15651-FF4040.svg)](https://arxiv.org/abs/2007.15651) | [![GitHub stars](https://img.shields.io/github/stars/lllyasviel/ControlNet.svg?logo=github&label=Stars)](https://github.com/lllyasviel/ControlNet) | 75.4 | 21.4 | 269.5 | 0.06
+| SMILE | [![arXiv](https://img.shields.io/badge/arXiv-2512.07251-FF4040.svg)](https://www.arxiv.org/abs/2512.07251) | [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SMILE.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SMILE) | 86.1 | 25.8 | 133.4 |0.95
 
 ## Comparison to current commerical AI models
 <div align="center">
@@ -210,7 +210,7 @@ Our work further includes **CTVerse**, a large-scale multi-phase CT dataset cont
 @article{liu2025see,
   title={See More, Change Less: Anatomy-Aware Diffusion for Contrast Enhancement},
   author={Liu, Junqi and Wu, Zejun and Bassi, Pedro RAS and Zhou, Xinze and Li, Wenxuan and Hamamci, Ibrahim E and Er, Sezgin and Lin, Tianyu and Luo, Yi and Płotka, Szymon and others},
-  journal={arXiv preprint arXiv:TBD},
+  journal={arXiv preprint arXiv:https://www.arxiv.org/abs/2512.07251},
   year={2025},
   url={https://github.com/MrGiovanni/SMILE}
 }
