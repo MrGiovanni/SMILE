@@ -1,35 +1,42 @@
-## SMILE Guide Book
-### step 0. download SMILE models checkpoints
+# SMILE Inference Detailed Guide Book
+### step 1. download SMILE models checkpoints and demo dataset
 To inference SMILE, please first download the pre-trained checkpoints for VAE, Classifier and Segmenter, as well as the trained SMILE model.
 
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg?logo=huggingface)](https://huggingface.co/your-model-link)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-SMILE_Model-yellow.svg?logo=huggingface)](https://huggingface.co/MitakaKuma/SMILE)
+
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-Demo_Dataset-yellow.svg?logo=huggingface)](https://huggingface.co/MitakaKuma/SMILE_Demo_Dataset)
+```bash
+bash download_ckpts.sh
+bash download_smile_demo_data.sh
+```
 
 <details> 
-<summary>download model checkpoints:</summary>
+<summary>Click to download deatiled model checkpoints 🤖</summary>
 
+All of the pre-trained will be download to `./ckpts` folder.
 ## Download the Super-VAE checkpoints
 ```bash
-hf download CVPR-SMILE/SMILE_mini --include="autoencoder/*" --local-dir "./ckpt" 
+hf download MitakaKuma/SMILE --include="autoencoder/*" --local-dir "./ckpt" 
 ```
 
 ## Download the Classification model:
 ```bash
-hf download CVPR-SMILE/SMILE_mini --include="classifier/*" --local-dir="./ckpt"
+hf download MitakaKuma/SMILE --include="classifier/*" --local-dir="./ckpt"
 ```
 
 ## Download the Segmentation model:
 ```bash
-hf download CVPR-SMILE/SMILE_mini --include="segmenter/*" --local-dir="./ckpt"
+hf download MitakaKuma/SMILE --include="segmenter/*" --local-dir="./ckpt"
 ```
 
 ## Download the SMILE checkpoints
 ```bash
-hf download CVPR-SMILE/SMILE_mini --include="SMILE_v0.2/*" --local-dir="./ckpt"
+hf download MitakaKuma/SMILE --include="SMILE/*" --local-dir="./ckpt"
 ```
 
 </details>
 
-### step 1. prepare the data:
+### step 2. 🍳 prepare the data (🔔 if with the demo dataset, skip):
 
 The data for inference is expected to be organized into BDMAP form, as below:
 
@@ -43,8 +50,9 @@ The data for inference is expected to be organized into BDMAP form, as below:
 ```
 
 <a id="multi-ct-inference"></a>
-### step 2. choose inference mode:
-1. **multiple-CT infernce / dataset inference:**
+
+### step 3. 🍇 choose inference mode:
+1. **dataset inference (PREFERRED, general purpose):**
     ```bash
     cd SMILEModel
     bash inference_multiple_CT.sh
@@ -84,7 +92,7 @@ The data for inference is expected to be organized into BDMAP form, as below:
     </details>
 
 
-2. **single-CT case infernce:**
+2. **single-CT case infernce (ONLY for testing and debuging):**
     ```bash
     cd SMILEModel
     bash inference.sh \

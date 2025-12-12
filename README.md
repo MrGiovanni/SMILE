@@ -9,7 +9,7 @@
 
 [![smile dataset](https://img.shields.io/badge/SMILE-Dataset-FF4040.svg)](https://github.com/MrGiovanni/SMILE?tab=readme-ov-file#ctverse-dataset)
 [![smile benchmark](https://img.shields.io/badge/SMILE-Benchmark-FF4040.svg)](https://github.com/MrGiovanni/SMILE?tab=readme-ov-file#smile-benchmark)
-[![smile model](https://img.shields.io/badge/SMILE-Model-FF4040.svg)](https://github.com/MrGiovanni/SMILE?tab=readme-ov-file#smile-model) <br/>
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-SMILE_Model-yellow.svg?logo=huggingface)](https://huggingface.co/MitakaKuma/SMILE) <br/>
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=MrGiovanni/SMILE&left_color=%2363C7E6&right_color=%23CEE75F)
 [![GitHub Repo stars](https://img.shields.io/github/stars/MrGiovanni/SMILE?style=social)](https://github.com/MrGiovanni/SMILE/stargazers) 
 <a href="https://twitter.com/bodymaps317">
@@ -42,9 +42,9 @@ Major updates and announcements are shown below.
 
   🔥 [2025-11] **Repository Launch** -- SMILE v0.1 is now live !!! We are building the comprehensive diffusion framework, that can enhance CT images precisely and **clinically meaningful**.
 
-  🔥 [2025-11] **New Version Updated** -- SMILE v0.2 is now available !! Compared to the initial version, v0.2 improves greatly in removing the small artifacts and organ HU range. See [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg?logo=huggingface)](https://huggingface.co/your-model-link) for model config details.
+  🔥 [2025-11] **New Version Updated** -- SMILE v0.2 is now available !! Compared to the initial version, v0.2 improves greatly in removing the small artifacts and organ HU range. See [![HuggingFace](https://img.shields.io/badge/HuggingFace-SMILE_Model-yellow.svg?logo=huggingface)](https://huggingface.co/MitakaKuma/SMILE) for model config details.
 
-  🤖 [2025-12] **Better Segmenter** -- We provide a better segmenter (+5 avg. DSC), that trained with more dynamic data! The model is trained on public PanTS dataset [![GitHub](https://img.shields.io/badge/GitHub-Repo-black?logo=github)](https://github.com/MrGiovanni/PanTS), and the model is now online: [![HuggingFace](https://img.shields.io/badge/HuggingFace-Model-yellow.svg?logo=huggingface)](https://huggingface.co/CVPR-SMILE/PanTS_Segmenter).
+  🤖 [2025-12] **Better Segmenter** -- We provide a better segmenter (+5 avg. DSC), that trained with more dynamic data! The model is trained on public PanTS dataset [![GitHub](https://img.shields.io/badge/GitHub-PanTS-black?logo=github)](https://github.com/MrGiovanni/PanTS), and the model is now online: [![HuggingFace](https://img.shields.io/badge/HuggingFace-Segmenter-yellow.svg?logo=huggingface)](https://huggingface.co/MitakaKuma/PanTS_Segmenter).
 
   🚀 [Ongoing] **New Version Preparing** -- SMILE v0.3 is undergoing fine-tuning process and will be made available soon! This version expects to make organ substructures such as kidney cortex more realistic 📈.
 
@@ -69,10 +69,10 @@ Major updates and announcements are shown below.
 |:---|:---|:---|:---:|:---:|:---:|:---:|
 | Pix2Pix | [![arXiv](https://img.shields.io/badge/arXiv-1611.07004-FF4040.svg)](https://arxiv.org/abs/1611.07004) | [![GitHub stars](https://img.shields.io/github/stars/phillipi/pix2pix.svg?logo=github&label=Stars)](https://github.com/phillipi/pix2pix) | 60.7 | 18.8 | 299.7 | 0.26
 | CycleGAN | [![arXiv](https://img.shields.io/badge/arXiv-1703.10593-FF4040.svg)](https://arxiv.org/abs/1703.10593) | [![GitHub stars](https://img.shields.io/github/stars/junyanz/CycleGAN.svg?logo=github&label=Stars)](https://github.com/junyanz/CycleGAN) | 71.9 | 18.2 | 271.1 | 0.09
-| DDPM | [![arXiv](https://img.shields.io/badge/arXiv-2006.11239-FF4040.svg)](https://arxiv.org/abs/2006.11239) | [![GitHub stars](https://img.shields.io/github/stars/hojonathanho/diffusion.svg?logo=github&label=Stars)](https://github.com/hojonathanho/diffusion)
+| DALL-E | [![arXiv](https://img.shields.io/badge/arXiv-2006.11239-FF4040.svg)](https://arxiv.org/abs/2012.09841) | [![GitHub stars](https://img.shields.io/github/stars/hojonathanho/diffusion.svg?logo=github&label=Stars)](https://github.com/hojonathanho/diffusion) | 51.4 | 16.3 | 423.7 | 0.71
 | Stable Diffusion | [![arXiv](https://img.shields.io/badge/arXiv-2112.10752-FF4040.svg)](https://arxiv.org/abs/2112.10752) | [![GitHub stars](https://img.shields.io/github/stars/CompVis/stable-diffusion.svg?logo=github&label=Stars)](https://github.com/CompVis/stable-diffusion) | 64.6 | 16.0 | 406.3 | 0.45
-| ControlNet | [![arXiv](https://img.shields.io/badge/arXiv-2302.05543-FF4040.svg)](https://arxiv.org/abs/2302.05543) | [![GitHub stars](https://img.shields.io/github/stars/lllyasviel/ControlNet.svg?logo=github&label=Stars)](https://github.com/lllyasviel/ControlNet)
-| SMILE | [![arXiv](https://img.shields.io/badge/arXiv-TBD-FF4040.svg)](https://arxiv.org/abs/TBD) | [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SMILE.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SMILE) | 86.1 | 25.8 | 133.4 |0.95
+| CUT | [![arXiv](https://img.shields.io/badge/arXiv-2302.05543-FF4040.svg)](https://arxiv.org/abs/2007.15651) | [![GitHub stars](https://img.shields.io/github/stars/lllyasviel/ControlNet.svg?logo=github&label=Stars)](https://github.com/lllyasviel/ControlNet) | 75.4 | 21.4 | 269.5 | 0.06
+| SMILE | [![arXiv](https://img.shields.io/badge/arXiv-TBD-FF4040.svg)](https://www.arxiv.org/abs/2512.07251) | [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SMILE.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SMILE) | 86.1 | 25.8 | 133.4 |0.95
 
 ## Comparison to current commerical AI models
 <div align="center">
@@ -81,10 +81,7 @@ Major updates and announcements are shown below.
 
 
 <a id="smile-guidebook"></a>
-# SMILE Model 
-
-> [!NOTE]
-> Model checkpoints will be released upon paper acceptance. Stay tuned!
+# SMILE Guidebooks
 
 **Key Features:**
 - **Structure-aware supervision** that guides enhancements to follow realistic organ boundaries and contrast dynamics
@@ -97,61 +94,50 @@ Major updates and announcements are shown below.
 - Accessible diagnostic imaging for patients who cannot receive contrast agents
 
 ## Installation
-
-### Prerequisites
-
-- Python 3.12 or higher
-- PyTorch 2.7 or higher
-- CUDA-compatible GPU with CUDA 12.6 or higher
-- GPU VRAM > 20 GB is highly recommanded
-
-### **Create a new Conda environment:**
-
 ```bash
-conda create -n smile python=3.12
-conda deactivate
-conda activate smile
+bash environment.sh
+```
+<details>
+<summary> Click here for detailed pre-requisites 🌆</summary>
+
+  - Python 3.12 or higher
+  - PyTorch 2.7 or higher
+  - CUDA-compatible GPU with CUDA 12.6 or higher
+  - GPU VRAM > 20 GB is highly recommanded
+</details>
+
+
+## Try SMILE 😊 ! The Inference Guide
+See detailed instructions for data preparation, paprameter configuration [SMILE GUIDE BOOK](./document/SMILEGuidebook.md) 🔎
+
+**(1) download the SMILE checkpoints**
+
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-SMILE_Model-yellow.svg?logo=huggingface)](https://huggingface.co/MitakaKuma/SMILE)
+```bash
+bash download_ckpts.sh
 ```
 
-### **Clone the repository and install the package:**
-
+**(2) download the SMILE demo data**
 ```bash
-git clone https://github.com/MrGiovanni/SMILE.git
-cd SMILE
-pip install -r requirements.txt
+bash download_smile_demo_data.sh
 ```
 
-## Getting Started
-
-See detailed instructions in [SMILE GUIDE BOOK](./document/SMILEGuidebook.md) 🔎
-
-**(1) multiple-CT infernce / dataset inference:**
+**multiple-CT infernce / dataset inference:**
 ```bash
-bash inference_multiple_CT.sh
+bash inference_easy.sh
 ```
+check the enhancement results under the default output folder `./out`.
 
-
-**(2) single-CT case infernce:**
-```bash
-bash inference.sh --gpu_id 0 --source non-contrast --target arterial,venous,delayed --patient_id RS-GIST-121
-```
-
-
-<a id="CTVerse-dataset"></a>
 
 # CTVerse Dataset
 Our work further includes **CTVerse**, a large-scale multi-phase CT dataset containing **477** patients from **112** hospitals, with all four contrast phases (non-contrast, arterial, venous, and delay). 
 
 ```shell
-git clone https://github.com/MrGiovanni/SMILE.git
-cd SMILE
-bash download_CTVerse_data.sh # It needs storage for multi-phase CT scans
-bash download_CTVerse_label.sh 
 # This work is currently under peer review, but early access is available!
 # To request the CTVerse dataset files, please email Zongwei Zhou at zzhou82@jh.edu
 ```
 
-#### Official training set
+<!-- #### Official training set
 - CTVerse-tr (*n*=382)
 
 #### Official *in-distribution* test set 
@@ -171,7 +157,7 @@ bash download_CTVerse_label.sh
 
 - **88 anatomical structures** including organs, vessels, bones, and disease regions
 - **159,632 three-dimensional masks** total across all patients and phases
-- Annotations for **pancreatic, liver, and kidney tumors**
+- Annotations for **pancreatic, liver, and kidney tumors** -->
 
 
 
