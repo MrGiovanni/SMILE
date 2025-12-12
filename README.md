@@ -128,6 +128,27 @@ bash inference_easy.sh
 ```
 check the enhancement results under the default output folder `./out`.
 
+<details>
+<summary> If you choose to use your own dataset, click here !</summary>
+<br>
+
+step 1. Place your data folder under `./Data`, 
+
+step 2. You can modify the parameters:<br/>
+
+1. `Dataset_Name`: name of your own dataset name.
+2. `TARGETS`: enhancement targets. Default as `("arterial" "venous" "delayed")`.
+3. `GUIDE_CSV (optional)`: .csv file to guide model to inference on specific cases. An example:<br>
+```
+Inference ID
+BDMAP_xxxx01
+BDMAP_xxxx02
+BDMAP_xxxx03
+BDMAP_xxxx04
+...
+```
+</details>
+
 
 # CTVerse Dataset
 Our work further includes **CTVerse**, a large-scale multi-phase CT dataset containing **477** patients from **112** hospitals, with all four contrast phases (non-contrast, arterial, venous, and delay). 

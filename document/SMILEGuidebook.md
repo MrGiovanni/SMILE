@@ -81,7 +81,15 @@ The data for inference is expected to be organized into BDMAP form, as below:
         `TARGETS`: One or multiple enhancement targets (comma-separated).  
           Options: `non-contrast`, `arterial`, `venous`, `delayed`.
 
-        `GUIDE_CSV`: Case list CSV, containing the cases to inference.
+        `GUIDE_CSV (optional)`: .csv file to guide model to inference on specific cases. An example:<br>
+        ```
+        Inference ID
+        BDMAP_xxxx01
+        BDMAP_xxxx02
+        BDMAP_xxxx03
+        BDMAP_xxxx04
+        ...
+        ```
 
 
     2. The outputs are supposed to be stored in:

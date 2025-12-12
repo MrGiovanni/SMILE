@@ -1,3 +1,6 @@
+huggingface-cli login
+
+
 ## Download the Super-VAE checkpoints
 ```bash
 hf download MitakaKuma/SMILE --include="autoencoder/*" --local-dir "./ckpt" 
