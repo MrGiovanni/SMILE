@@ -59,13 +59,13 @@ export MODELS_FOLDER="/projects/bodymaps/jliu452/ckpt"
 export SD_MODEL_NAME="stable-diffusion-v1-5/stable-diffusion-v1-5"
 export FT_VAE_NAME="../STEP1-AutoEncoderModel/klvae/autoencoder_no_kl"
 
-DATASET="Dataset901_SMILE/PT_data"
+DATASET="Dataset101_example"
 
 INPUT_CASE_NAME="${PATIENT_ID}_${SOURCE}"
-CT_PATH="/projects/bodymaps/jliu452/Data/$DATASET/${INPUT_CASE_NAME}.nii.gz"
+CT_PATH="../Example/$DATASET/${INPUT_CASE_NAME}.nii.gz"
 
 TRAINED_UNET_PATH="$MODELS_FOLDER/$MODEL_NAME"
-OUTPUT_ROOT="/projects/bodymaps/jliu452/TRANS/translation/model-$MODEL_NAME"
+OUTPUT_ROOT="../out/model-$MODEL_NAME"
 
 echo "[INFO] Input CT:      $CT_PATH"
 
@@ -76,7 +76,7 @@ CUDA_VISIBLE_DEVICES=$GPU_ID python -W ignore inference.py \
     --input_path "$CT_PATH" \
     --output_path "$OUTPUT_ROOT" \
     --target_phase "$TARGETS" \
-    --chunk_size 128 \
+    --chunk_size 32 \
     --finetuned_vae_name_or_path "$FT_VAE_NAME" \
     --finetuned_unet_name_or_path "$TRAINED_UNET_PATH" \
     --sd_model_name_or_path "$SD_MODEL_NAME"
