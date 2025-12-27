@@ -7,9 +7,9 @@
 <div align="center">
 
 
-[![smile dataset](https://img.shields.io/badge/SMILE-Dataset-FF4040.svg)](https://github.com/MrGiovanni/SMILE?tab=readme-ov-file#ctverse-dataset)
-[![smile benchmark](https://img.shields.io/badge/SMILE-Benchmark-FF4040.svg)](https://github.com/MrGiovanni/SMILE?tab=readme-ov-file#smile-benchmark)
-[![HuggingFace](https://img.shields.io/badge/SMILE-Model-FF4040.svg)](https://huggingface.co/MitakaKuma/SMILE) <br/>
+[![smile dataset](https://img.shields.io/badge/SMILE-Dataset-FF4040.svg)](https://github.com/MrGiovanni/SMILE?tab=readme-ov-file#dataset)
+[![smile benchmark](https://img.shields.io/badge/SMILE-Benchmark-FF4040.svg)](https://github.com/MrGiovanni/SMILE?tab=readme-ov-file#benchmark)
+[![HuggingFace](https://img.shields.io/badge/SMILE-Model-FF4040.svg)](https://github.com/MrGiovanni/SMILE?tab=readme-ov-file#model) <br/>
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=MrGiovanni/SMILE&left_color=%2363C7E6&right_color=%23CEE75F)
 [![GitHub Repo stars](https://img.shields.io/github/stars/MrGiovanni/SMILE?style=social)](https://github.com/MrGiovanni/SMILE/stargazers) 
 <a href="https://twitter.com/bodymaps317">
@@ -28,35 +28,19 @@ We present **SMILE** (Super Modality Image Learning and Enhancement), an anatomy
 Johns Hopkins University <br/>
 <a href='https://www.zongweiz.com/dataset'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://www.cs.jhu.edu/~zongwei/preprint/liu2025see.pdf'><img src='https://img.shields.io/badge/Paper-PDF-purple'></a>
 
-# 📰 News & Updates
-Major updates and announcements are shown below.
-<details> 
-<summary> Click for full timeline ⌛️</summary>
-<br>
-  🔥 [2025-11] **Repository Launch** -- SMILE v0.1 is now live !!! We are building the comprehensive diffusion framework, that can enhance CT images precisely and **clinically meaningful**.
-
-  🔥 [2025-11] **New Version Updated** -- SMILE v0.2 is now available !! Compared to the initial version, v0.2 improves greatly in removing the small artifacts and organ HU range. See [![HuggingFace](https://img.shields.io/badge/HuggingFace-SMILE_Model-yellow.svg?logo=huggingface)](https://huggingface.co/MitakaKuma/SMILE) for model config details.
-
-  🤖 [2025-12] **Better Segmenter** -- We provide a better segmenter (+5 avg. DSC), that trained with more dynamic data! The model is trained on public PanTS dataset [![GitHub](https://img.shields.io/badge/GitHub-PanTS-black?logo=github)](https://github.com/MrGiovanni/PanTS), and the model is now online: [![HuggingFace](https://img.shields.io/badge/HuggingFace-Segmenter-yellow.svg?logo=huggingface)](https://huggingface.co/MitakaKuma/PanTS_Segmenter).
-
-  🚀 [Ongoing] **New Version Preparing** -- SMILE v0.3 is undergoing fine-tuning process and will be made available soon! This version expects to make organ substructures such as kidney cortex more realistic 📈.
-
-</details> 
-
 # Model
 
+#### 1 | Install
+
+To set up environment, see INSTALL.md for details.
+
 ```bash
-bash environment.sh
+git https://github.com/MrGiovanni/SMILE.git
+cd SMILE
+while read requirement; do
+    pip install "$requirement" || echo "Failed to install $requirement, skipping..."
+done < requirements.txt
 ```
-<details>
-<summary> Click here for detailed pre-requisites 🌆</summary>
-
-  - Python 3.12 or higher
-  - PyTorch 2.7 or higher
-  - CUDA-compatible GPU with CUDA 12.6 or higher
-  - GPU VRAM > 20 GB is highly recommanded
-</details>
-
 
 ## Try SMILE 😊 ! The Inference Guide
 See detailed instructions for data preparation, paprameter configuration [SMILE GUIDE BOOK](./document/SMILEGuidebook.md) 🔎
