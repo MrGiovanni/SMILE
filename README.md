@@ -32,7 +32,7 @@ Johns Hopkins University <br/>
 
 #### 1 | Install
 
-To set up environment, see INSTALL.md for details.
+To set up environment, see [INSTALL.md](https://github.com/MrGiovanni/SMILE/blob/main/document/INSTALL.md) for details.
 
 ```bash
 git https://github.com/MrGiovanni/SMILE.git
@@ -41,40 +41,32 @@ while read requirement; do
     pip install "$requirement" || echo "Failed to install $requirement, skipping..."
 done < requirements.txt
 ```
+#### 2 | Download checkpoint
 
-## Try SMILE 😊 ! The Inference Guide
-See detailed instructions for data preparation, paprameter configuration [SMILE GUIDE BOOK](./document/SMILEGuidebook.md) 🔎
-
-**(1) download the SMILE checkpoints**
-
-[![HuggingFace](https://img.shields.io/badge/HuggingFace-SMILE_Model-yellow.svg?logo=huggingface)](https://huggingface.co/MitakaKuma/SMILE)
 ```bash
 bash download_ckpts.sh
 ```
 
-**(2) download the SMILE demo data**
+#### 3 | Direct inference
+
+###### 3.1 ｜ We provide demo data for quick testing
+
 ```bash
 bash download_demo_dataset.sh
-```
-
-**(3) dataset inference:**
-```bash
 bash inference_easy.sh
 ```
-check the enhancement results under the default output folder `./out`.
+The enhancement results are in the `./out` folder.
 
-<details>
-<summary> If you choose to use your own dataset, click here !</summary>
-<br>
+###### 3.2 ｜ Test on your own data
 
-step 1. Place your data folder under `./Data`, 
+First, place your data folder under `./Data` using the same format as our demo data. 
 
-step 2. You can modify the parameters:<br/>
+Second, modify the parameters:
 
 1. `Dataset_Name`: name of your own dataset name.
 2. `TARGETS`: enhancement targets. Default as `("arterial" "venous" "delayed")`.
 3. `GUIDE_CSV (optional)`: .csv file to guide model to inference on specific cases. An example:<br>
-```
+```bash
 Inference ID
 BDMAP_xxxx01
 BDMAP_xxxx02
@@ -82,8 +74,6 @@ BDMAP_xxxx03
 BDMAP_xxxx04
 ...
 ```
-</details>
-
 
 # Benchmark
 
