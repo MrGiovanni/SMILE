@@ -53,19 +53,19 @@ bash download_ckpts.sh
 
 ```bash
 bash download_demo_dataset.sh
-bash inference_easy.sh
+bash inference.sh
 ```
 The enhancement results are in the `./out` folder.
 
 ###### 3.2 ｜ Test on your own data
 
-First, place your data folder under `./Data` using the same format as our demo data. 
+First, save your data folder (e.g., `PanTS`) in `./Data` using the same format as our demo data. 
 
-Second, modify the parameters:
+Second, modify the parameters in the `inference.sh`:
 
-1. `Dataset_Name`: name of your own dataset name.
-2. `TARGETS`: enhancement targets. Default as `("arterial" "venous" "delayed")`.
-3. `GUIDE_CSV (optional)`: .csv file to guide model to inference on specific cases. An example:<br>
+1. `Dataset_Name`: name of your own dataset name (e.g., `PanTS`).
+2. `TARGETS` (optional): enhancement targets. Default as `("arterial" "venous" "delayed")`.
+3. `GUIDE_CSV` (optional): .csv file to guide model to inference on specific cases. An example:<br>
 ```bash
 Inference ID
 BDMAP_xxxx01
