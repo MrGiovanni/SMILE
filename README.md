@@ -35,7 +35,7 @@ Johns Hopkins University <br/>
 To set up environment, see [INSTALL.md](https://github.com/MrGiovanni/SMILE/blob/main/document/INSTALL.md) for details.
 
 ```bash
-git https://github.com/MrGiovanni/SMILE.git
+git clone https://github.com/MrGiovanni/SMILE.git
 cd SMILE
 while read requirement; do
     pip install "$requirement" || echo "Failed to install $requirement, skipping..."
