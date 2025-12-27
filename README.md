@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="document/fig_teaser.jpg" alt="SMILE" width=100%>
+  <img src="document/pdac_example.png" alt="SMILE" width=100%>
 </div>
 
-<h1 align="center" style="font-size: 60px; margin-bottom: 4px">😊 SMILE: Anatomy-Aware Contrast Enhancement</h1>
+<h1 align="center" style="font-size: 60px; margin-bottom: 4px">Anatomy-Aware Contrast Enhancement</h1>
 
 <div align="center">
 
@@ -19,20 +19,13 @@
 </div>
 
 
-We present **SMILE** (Super Modality Image Learning and Enhancement), an anatomy-aware diffusion model for clinically reliable CT contrast enhancement. 
-
-SMILE achieves significant improvements: **+14.2% SSIM**, **+20.6% PSNR**, **+50% FID**, and enables cancer detection from non-contrast CT scans with **+10% F1 score** improvement.
-
-<div align="center">
-  <img src="document/pdac_example.png" alt="SMILE" width=100%>
-</div>
+We present **SMILE** (Super Modality Image Learning and Enhancement), an anatomy-aware diffusion model for clinically reliable CT contrast enhancement. SMILE achieves significant improvements: **+14.2% SSIM**, **+20.6% PSNR**, **+50% FID**, and enables cancer detection from non-contrast CT scans with **+10% F1 score** improvement.
 
 <a id="smile-paper"></a>
 # Paper
 <b>See More, Change Less: Anatomy-Aware Diffusion for Contrast Enhancement</b> <br/>
-[Junqi Liu](https://scholar.google.com/citations?hl=en&authuser=1&user=4Xpspl0AAAAJ), [Zejun Wu](), [Pedro R. A. S. Bassi](), [Xinze Zhou](), [Wenxuan Li](), [Ibrahim E. Hamamci](), [Sezgin Er](), [Tianyu Lin](), [Yi Luo](), [Szymon Płotka](https://scholar.google.com/citations?hl=en&authuser=1&user=g9sWRN0AAAAJ), [Bjoern Menze](https://scholar.google.com/citations?hl=en&authuser=1&user=Kv2QrQgAAAAJ), [Daguang Xu](https://scholar.google.com/citations?hl=en&authuser=1&user=r_VHYHAAAAAJ), [Kai Ding](https://scholar.google.com/citations?hl=en&authuser=1&user=OvpsAYgAAAAJ), [Kang Wang](https://radiology.ucsf.edu/people/kang-wang), [Yang Yang](https://scholar.google.com/citations?hl=en&authuser=1&user=6XsJUBIAAAAJ), [Yucheng Tang](https://scholar.google.com/citations?hl=en&authuser=1&user=0xheliUAAAAJ), [Alan Yuille](https://www.cs.jhu.edu/~ayuille/), [Zongwei Zhou](https://www.zongweiz.com/)<sup>★</sup> <br/>
-Johns Hopkins University, University of Copenhagen, University of Virginia, University of Bologna, and others
-
+[Junqi Liu](https://scholar.google.com/citations?hl=en&authuser=1&user=4Xpspl0AAAAJ), [Zejun Wu](https://scholar.google.com/citations?hl=en&user=s2umIj8AAAAJ), [Pedro R. A. S. Bassi](https://scholar.google.com/citations?hl=en&user=NftgL6gAAAAJ), [Xinze Zhou](), [Wenxuan Li](https://scholar.google.com/citations?hl=en&user=tpNZM2YAAAAJ), [Ibrahim E. Hamamci](https://scholar.google.com/citations?hl=en&user=7bN36N0AAAAJ), [Sezgin Er](https://scholar.google.com/citations?hl=en&user=_vr-hRkAAAAJ), [Tianyu Lin](https://scholar.google.com/citations?hl=en&user=eHJYs-IAAAAJ), [Yi Luo](), [Szymon Płotka](https://scholar.google.com/citations?hl=en&authuser=1&user=g9sWRN0AAAAJ), [Bjoern Menze](https://scholar.google.com/citations?hl=en&authuser=1&user=Kv2QrQgAAAAJ), [Daguang Xu](https://scholar.google.com/citations?hl=en&authuser=1&user=r_VHYHAAAAAJ), [Kai Ding](https://scholar.google.com/citations?hl=en&authuser=1&user=OvpsAYgAAAAJ), [Kang Wang](https://radiology.ucsf.edu/people/kang-wang), [Yang Yang](https://scholar.google.com/citations?hl=en&authuser=1&user=6XsJUBIAAAAJ), [Yucheng Tang](https://scholar.google.com/citations?hl=en&authuser=1&user=0xheliUAAAAJ), [Alan Yuille](https://www.cs.jhu.edu/~ayuille/), [Zongwei Zhou](https://www.zongweiz.com/)<sup>★</sup> <br/>
+Johns Hopkins University <br/>
 <a href='https://www.zongweiz.com/dataset'><img src='https://img.shields.io/badge/Project-Page-Green'></a> <a href='https://www.cs.jhu.edu/~zongwei/preprint/liu2025see.pdf'><img src='https://img.shields.io/badge/Paper-PDF-purple'></a>
 
 # 📰 News & Updates
@@ -50,50 +43,8 @@ Major updates and announcements are shown below.
 
 </details> 
 
-# Overview
-* 💯 [<u>**SMILE Benchmarks**</u>](#smile-benchmarks)
-* 🦾 [<u>**SMILE Guidebooks**</u>](#smile-guidebook)
-* 🌍 [<u>**CTVerse Dataset**</u>](#CTVerse-dataset)
-* 🔬 [<u>**Surveys of GenAI in Medial Imageing**</u>](#smile-survey)
-* 👩‍🏫 [<u>**Citations**</u>](#smile-citations)
+# Model
 
-
-<a id="smile-benchmarks"></a>
-
-# SMILE Benchmark (official in-distribution test set)
-
-> [!NOTE]
-> We are calling for more baseline methods. 
-
-| model  | paper | github | SSIM | PSNR | FID | Intensity Correlation |
-|:---|:---|:---|:---:|:---:|:---:|:---:|
-| Pix2Pix | [![arXiv](https://img.shields.io/badge/arXiv-1611.07004-FF4040.svg)](https://arxiv.org/abs/1611.07004) | [![GitHub stars](https://img.shields.io/github/stars/phillipi/pix2pix.svg?logo=github&label=Stars)](https://github.com/phillipi/pix2pix) | 60.7 | 18.8 | 299.7 | 0.26
-| CycleGAN | [![arXiv](https://img.shields.io/badge/arXiv-1703.10593-FF4040.svg)](https://arxiv.org/abs/1703.10593) | [![GitHub stars](https://img.shields.io/github/stars/junyanz/CycleGAN.svg?logo=github&label=Stars)](https://github.com/junyanz/CycleGAN) | 71.9 | 18.2 | 271.1 | 0.09
-| DALL-E | [![arXiv](https://img.shields.io/badge/arXiv-2012.0984-FF4040.svg)](https://arxiv.org/abs/2012.09841) | [![GitHub stars](https://img.shields.io/github/stars/hojonathanho/diffusion.svg?logo=github&label=Stars)](https://github.com/hojonathanho/diffusion) | 51.4 | 16.3 | 423.7 | 0.71
-| Stable Diffusion | [![arXiv](https://img.shields.io/badge/arXiv-2112.10752-FF4040.svg)](https://arxiv.org/abs/2112.10752) | [![GitHub stars](https://img.shields.io/github/stars/CompVis/stable-diffusion.svg?logo=github&label=Stars)](https://github.com/CompVis/stable-diffusion) | 64.6 | 16.0 | 406.3 | 0.45
-| CUT | [![arXiv](https://img.shields.io/badge/arXiv-2007.15651-FF4040.svg)](https://arxiv.org/abs/2007.15651) | [![GitHub stars](https://img.shields.io/github/stars/lllyasviel/ControlNet.svg?logo=github&label=Stars)](https://github.com/lllyasviel/ControlNet) | 75.4 | 21.4 | 269.5 | 0.06
-| SMILE | [![arXiv](https://img.shields.io/badge/arXiv-2512.07251-FF4040.svg)](https://www.arxiv.org/abs/2512.07251) | [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SMILE.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SMILE) | 86.1 | 25.8 | 133.4 |0.95
-
-## Comparison to current commerical AI models
-<div align="center">
-  <img src="document/Twitter.png" alt="SMILE" width=100%>
-</div>
-
-
-<a id="smile-guidebook"></a>
-# SMILE Guidebooks
-
-**Key Features:**
-- **Structure-aware supervision** that guides enhancements to follow realistic organ boundaries and contrast dynamics
-- **Registration-free generation** that learns directly from unaligned multi-phase CT scans without voxel-wise registration
-- **Unified inference** for efficient, consistent enhancement across multiple contrast phases in a single diffusion pipeline
-
-**Clinical Applications:**
-- Opportunistic cancer screening from non-contrast CT scans
-- Enhanced tumor detection without additional contrast injection
-- Accessible diagnostic imaging for patients who cannot receive contrast agents
-
-## Installation
 ```bash
 bash environment.sh
 ```
@@ -150,7 +101,32 @@ BDMAP_xxxx04
 </details>
 
 
-# CTVerse Dataset
+# Benchmark
+
+#### 1 | Image enhancement methods
+
+> [!NOTE]
+> We are calling for more baseline methods. 
+
+| model  | paper | github | SSIM | PSNR | FID | Intensity Correlation |
+|:---|:---|:---|:---:|:---:|:---:|:---:|
+| Pix2Pix | [![arXiv](https://img.shields.io/badge/arXiv-1611.07004-FF4040.svg)](https://arxiv.org/abs/1611.07004) | [![GitHub stars](https://img.shields.io/github/stars/phillipi/pix2pix.svg?logo=github&label=Stars)](https://github.com/phillipi/pix2pix) | 60.7 | 18.8 | 299.7 | 0.26
+| CycleGAN | [![arXiv](https://img.shields.io/badge/arXiv-1703.10593-FF4040.svg)](https://arxiv.org/abs/1703.10593) | [![GitHub stars](https://img.shields.io/github/stars/junyanz/CycleGAN.svg?logo=github&label=Stars)](https://github.com/junyanz/CycleGAN) | 71.9 | 18.2 | 271.1 | 0.09
+| DALL-E | [![arXiv](https://img.shields.io/badge/arXiv-2012.0984-FF4040.svg)](https://arxiv.org/abs/2012.09841) | [![GitHub stars](https://img.shields.io/github/stars/hojonathanho/diffusion.svg?logo=github&label=Stars)](https://github.com/hojonathanho/diffusion) | 51.4 | 16.3 | 423.7 | 0.71
+| Stable Diffusion | [![arXiv](https://img.shields.io/badge/arXiv-2112.10752-FF4040.svg)](https://arxiv.org/abs/2112.10752) | [![GitHub stars](https://img.shields.io/github/stars/CompVis/stable-diffusion.svg?logo=github&label=Stars)](https://github.com/CompVis/stable-diffusion) | 64.6 | 16.0 | 406.3 | 0.45
+| CUT | [![arXiv](https://img.shields.io/badge/arXiv-2007.15651-FF4040.svg)](https://arxiv.org/abs/2007.15651) | [![GitHub stars](https://img.shields.io/github/stars/lllyasviel/ControlNet.svg?logo=github&label=Stars)](https://github.com/lllyasviel/ControlNet) | 75.4 | 21.4 | 269.5 | 0.06
+| SMILE | [![arXiv](https://img.shields.io/badge/arXiv-2512.07251-FF4040.svg)](https://www.arxiv.org/abs/2512.07251) | [![GitHub stars](https://img.shields.io/github/stars/MrGiovanni/SMILE.svg?logo=github&label=Stars)](https://github.com/MrGiovanni/SMILE) | 86.1 | 25.8 | 133.4 |0.95
+
+#### 2 | Commerical AI models
+
+<div align="center">
+  <img src="document/Twitter.png" alt="SMILE" width=100%>
+</div>
+
+
+
+# Dataset
+
 Our work further includes **CTVerse**, a large-scale multi-phase CT dataset containing **477** patients from **112** hospitals, with all four contrast phases (non-contrast, arterial, venous, and delay). 
 
 ```shell
@@ -180,51 +156,6 @@ Our work further includes **CTVerse**, a large-scale multi-phase CT dataset cont
 - **159,632 three-dimensional masks** total across all patients and phases
 - Annotations for **pancreatic, liver, and kidney tumors** -->
 
-
-
-<a id="smile-survey"></a>
-
-# Surveys 
-
-## 💉 Surveys of Generative Models in Medical Imaging
-
-[👩‍⚕️] models specificly designed for medical imaging use.
-
-[⭐️] surveys for generative models in medical imaging.
-
-
-### GAN-based Generative Models
-- **Pix2Pix**, “Image-to-Image Translation with Conditional Adversarial Networks”.  [![arXiv](https://img.shields.io/badge/arXiv-1611.07004-b31b1b.svg)](https://arxiv.org/abs/1611.07004) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://phillipi.github.io/pix2pix/) 
-
-- **CycleGAN**, “CycleGAN for Unpaired Medical Image Translation”.  [![arXiv](https://img.shields.io/badge/arXiv-1703.10593-b31b1b.svg)](https://arxiv.org/abs/1703.10593) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://junyanz.github.io/CycleGAN/) 
-
-
-- [👩‍⚕️] **CyTran**, “CyTran: Cycle-Consistent Transformers for Medical Image Translation”.   [![arXiv](https://img.shields.io/badge/arXiv-2301.12345-b31b1b.svg)](https://arxiv.org/abs/2110.06400)  
-
-- **CUT**, “Contrastive Unpaired Translation for Medical Applications”.  [![arXiv](https://img.shields.io/badge/arXiv-2007.15651-b31b1b.svg)](https://arxiv.org/abs/2007.15651) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://taesung.me/ContrastiveUnpairedTranslation/) 
-
-
-### VAE-based Generative Models
-- **DALL-E / VQ-VAE**, “Taming Transformers for Diverse Image Generation”.  [![arXiv](https://img.shields.io/badge/arXiv-2012.09841-b31b1b.svg)](https://arxiv.org/abs/2012.09841) [![Website](https://img.shields.io/badge/Website-Link-blue)](https://openai.com/index/dall-e/) 
-
-
-### Diffusion-based Generative Models
-- [👩‍⚕️] **MedDiffusion**, “Medical Diffusion: Denoising Diffusion Probabilistic Models for 3D Medical Image Generation”.  [![arXiv](https://img.shields.io/badge/arXiv-2307.12345-b31b1b.svg)](https://arxiv.org/abs/2211.03364)
-
-
-### Comprehensive Surveys
-> [!NOTE]
-> We are calling for more outstanding surveys 😊. 
-- [⭐️] **Diffusion Models for Medical Image Analysis: A Comprehensive Survey**.  
-  [![arXiv](https://img.shields.io/badge/arXiv-2207.10454-b31b1b.svg)](https://arxiv.org/abs/2211.07804)
-
-- [⭐️] **Generative ai for medical imaging: extending the monai framework**.
-  [![arXiv](https://img.shields.io/badge/arXiv-2303.09334-b31b1b.svg)](https://arxiv.org/abs/2307.15208)
-  
-
-
-<a id="smile-citations"></a>
-
 # Citation
 
 ```
@@ -236,11 +167,6 @@ Our work further includes **CTVerse**, a large-scale multi-phase CT dataset cont
   url={https://github.com/MrGiovanni/SMILE}
 }
 ```
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=MrGiovanni/SMILE&type=date&legend=top-left)](https://www.star-history.com/#MrGiovanni/SMILE&type=date&legend=top-left)
-
 
 # Acknowledgement
 
