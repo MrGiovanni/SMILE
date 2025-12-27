@@ -59,11 +59,20 @@ The enhancement results are in the `./out` folder.
 
 ###### 3.2 ｜ Test on your own data
 
-First, save your data folder (e.g., `PanTS`) in `./Data` using the same format as our demo data. 
+First, save your data folder (e.g., `PanTS`) in `./data` using the same format as our demo data. 
 
 Second, modify the parameters in the `inference.sh`:
 
 1. `Dataset_Name`: name of your own dataset name (e.g., `PanTS`).
+
+    ```bash
+      data
+      └──PanTS/
+          ├── PanTS_000001/
+          │     └── ct.nii.gz
+          ├── PanTS_000002/
+          │     └── ct.nii.gz
+    ```
 2. `TARGETS` (optional): enhancement targets. Default as `("arterial" "venous" "delayed")`.
 3. `GUIDE_CSV` (optional): .csv file to guide model to inference on specific cases. An example:<br>
 ```bash

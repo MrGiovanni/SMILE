@@ -1,1 +1,1 @@
-huggingface-cli download MitakaKuma/SMILE_DEMO_Dataset --repo-type dataset --include "Dataset101.zip" --local-dir "./Data"
+huggingface-cli download MitakaKuma/SMILE_DEMO_Dataset --repo-type dataset --include "Dataset101.zip" --local-dir "./data"

@@ -11,7 +11,7 @@ export SD_MODEL_NAME="stable-diffusion-v1-5/stable-diffusion-v1-5"
 
 # ================ User Defined ================ #
 MODEL_CKPT_NAME="SMILE"
-DATA_FOLDER="./Data"
+DATA_FOLDER="./data"
 DATASET_NAME="Dataset101"
 
 # Translation targets
