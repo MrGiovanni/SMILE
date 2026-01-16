@@ -37,10 +37,10 @@ To set up environment, see [INSTALL.md](https://github.com/MrGiovanni/SMILE/blob
 ```bash
 git clone https://github.com/MrGiovanni/SMILE.git
 cd SMILE
-while read requirement; do
-    pip install "$requirement" || echo "Failed to install $requirement, skipping..."
-done < requirements.txt
+while read p; do pip install "$p" || echo "Failed to install $p, skipping..."; done < requirements.txt
 ```
+
+
 #### 2 | Download checkpoint
 
 ```bash

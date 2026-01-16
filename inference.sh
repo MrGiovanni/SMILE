@@ -1,11 +1,11 @@
 #!/bin/bash
 # Inference script for multiple input, the data are structured as BDMAP AbdomenAtlasPro form
 # 7 Nov update: 
-# ⚠️ caution: chunk size 32 for A5000, 64 for A6000. 128 + for A100 and Higher Level GPUs
+# ⚠️ caution: chunk size 32 for A5000, 64 for A6000. 128 for A100/H100 . 256 for H200 and Higher Level GPUs
 
 set -e
 
-export MODELS_FOLDER="./ckpt" # DO NOT CHANGE
+export MODELS_FOLDER="SMILE/ckpt" # CHANGE HERE TO ABSOLUT PATH IF VAE/UNET NOT FOUND ERROR
 export SD_MODEL_NAME="stable-diffusion-v1-5/stable-diffusion-v1-5"
 
 
