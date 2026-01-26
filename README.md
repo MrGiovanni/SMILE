@@ -21,6 +21,10 @@
 
 We present **SMILE** (Super Modality Image Learning and Enhancement), an anatomy-aware diffusion model for clinically reliable CT contrast enhancement. SMILE achieves significant improvements: **+14.2% SSIM**, **+20.6% PSNR**, **+50% FID**, and enables cancer detection from non-contrast CT scans with **+10% F1 score** improvement.
 
+[![Image-to-Image AI for CT Enhancement](document/thumbnails.png)](https://www.youtube.com/watch?v=2GZHEahpLLc)
+
+Click the image above to watch the video on YouTube.
+
 <a id="smile-paper"></a>
 # Paper
 <b>See More, Change Less: Anatomy-Aware Diffusion for Contrast Enhancement</b> <br/>
