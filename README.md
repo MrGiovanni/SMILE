@@ -19,7 +19,7 @@
 </div>
 
 
-We present **SMILE** (Super Modality Image Learning and Enhancement), an anatomy-aware diffusion model for clinically reliable CT contrast enhancement. SMILE achieves significant improvements: **+14.2% SSIM**, **+20.6% PSNR**, **+50% FID**, and enables cancer detection from non-contrast CT scans with **+10% F1 score** improvement.
+We present **SMILE** (Super Modality Image Learning and Enhancement), an anatomy-aware diffusion model for clinically reliable CT contrast enhancement. SMILE achieves significant improvements: **+14.2% SSIM**, **+20.6% PSNR**, and **50% lower FID**, and enables cancer detection from non-contrast CT scans with **+10% F1 score** improvement.
 
 <a id="smile-paper"></a>
 # Paper
@@ -37,9 +37,7 @@ To set up environment, see [INSTALL.md](https://github.com/MrGiovanni/SMILE/blob
 ```bash
 git clone https://github.com/MrGiovanni/SMILE.git
 cd SMILE
-while read requirement; do
-    pip install "$requirement" || echo "Failed to install $requirement, skipping..."
-done < requirements.txt
+pip install -r requirements.txt
 ```
 #### 2 | Download checkpoint
 
@@ -145,7 +143,7 @@ Our work further includes **CTVerse**, a large-scale multi-phase CT dataset cont
 @article{liu2025see,
   title={See More, Change Less: Anatomy-Aware Diffusion for Contrast Enhancement},
   author={Liu, Junqi and Wu, Zejun and Bassi, Pedro RAS and Zhou, Xinze and Li, Wenxuan and Hamamci, Ibrahim E and Er, Sezgin and Lin, Tianyu and Luo, Yi and Płotka, Szymon and others},
-  journal={arXiv preprint arXiv:https://www.arxiv.org/abs/2512.07251},
+  journal={arXiv preprint arXiv:2512.07251},
   year={2025},
   url={https://github.com/MrGiovanni/SMILE}
 }
