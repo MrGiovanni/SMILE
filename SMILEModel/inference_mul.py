@@ -87,7 +87,7 @@ if __name__ == "__main__":
     # ---------- Load models ----------
     print(f"\n[SMILE Info] Loading models, version {os.path.basename(args.finetuned_unet_name_or_path)} ...")
 
-    vae = AutoencoderKL.from_pretrained(args.finetuned_vae_name_or_path, subfolder="vae", torch_dtype=torch.float16)
+    vae = AutoencoderKL.from_pretrained(args.finetuned_vae_name_or_path, subfolder="vae", torch_dtype=torch.float16, local_files_only=True)
     unet_args = SimpleNamespace(pretrained_model_name_or_path=args.sd_model_name_or_path)
     unet = init_unet(unet_args.pretrained_model_name_or_path, zero_cond_conv_in=True)
     unet_ckpt = safetensors.torch.load_file(
